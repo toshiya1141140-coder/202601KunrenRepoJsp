@@ -14,7 +14,7 @@ import cnst.Constant;
 import dto.coffee.CoffeeDto;
 
 /**
- * <P>タイトル : Daoクラス</P>
+ * <P>タイトル : Daoクラスです</P>
  * <P>説明 : DBとの読み書き担当。データ取得や保存の処理をここにまとめてる。</P>
  * @author kashiwagi toshiya 
  * @version 1.0 2026.01.29
