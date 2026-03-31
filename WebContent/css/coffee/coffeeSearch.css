@@ -1,0 +1,361 @@
+/* 全体の基本設定 */
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f3eee7;
+}
+
+/*お店のロゴの設定*/
+.shop_logo {
+	width: 80px;
+	height: 80px;
+	/*角を丸める*/
+	border-radius: 50%;
+	/*ロゴの枠線の仕切りを入れる*/
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	padding: 2px;
+}
+
+/*コーヒーカップのロゴの設定*/
+.cup_logo {
+	width: 50px;
+	height: 50px;
+	margin: 0 5px;
+}
+
+/*お店の名前*/
+.shop_name {
+	/*文字のフォント*/
+	font-family: cursive;
+	font-size: 28px;
+	/*文字の太さ*/
+	font-weight: 600;
+	color: rgb(218, 218, 218);
+	/*文字と文字の間隔*/
+	letter-spacing: 1px;
+}
+
+/* ヘッダー */
+header {
+	/*ヘッダーの要素を横並びにする*/
+	display: flex;
+	/*均等に広がる*/
+	justify-content: space-between;
+	/*上下の位置を揃える*/
+	align-items: center;
+	/*背景色*/
+	background-color: #5f4123;
+	/*文字の色*/
+	color: white;
+	/*内側の余白(上下15px 左右30px)*/
+	padding: 15px 30px;
+}
+
+/*在庫一覧の文字の設定*/
+header h1 {
+	/*デフォルトで大きな余白を持つので外側の余白を0にする*/
+	margin: 0;
+	/*親のヘッダーがdisplay: flex;なので*/
+	/*h1が中央に位置するようになる*/
+	flex: 1;
+	/*文字を中央に寄せる*/
+	text-align: center;
+	/*文字サイズ*/
+	font-size: 40px;
+}
+
+.left_area,
+.right_area {
+	width: 150px;
+	/*ロゴと店名を横並びにする*/
+	display: flex;
+	/*左右のエリア内を縦方向に中央揃えにする*/
+	align-items: center;
+	/*要素同士の間隔を空ける*/
+	gap: 10px;
+}
+
+/*ログインページのリンクの設定*/
+.btn_logout {
+	font-size: 18px;
+	color: white;
+	/*下線を消す*/
+	text-decoration: none;
+	/*太字にする*/
+	font-weight: bold;
+	/*ボタン要素はデフォルトがグレーなので背景を透明にする*/
+	background-color: transparent;
+	/*枠線を消す*/
+	border: none;
+	cursor: pointer;
+}
+
+/*ログインページのリンクにマウスが乗った時*/
+.btn_logout:hover {
+	/*アンダーラインを引く*/
+	text-decoration: underline;
+	/*透明度*/
+	opacity: 0.8;
+}
+
+/*CSV出力用のリンク設定*/
+.btn_csv {
+	font-size: 18px;
+	color: white;
+	/*下線を消す*/
+	text-decoration: none;
+	/*太字にする*/
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+/*CSV出力用のリンクにマウスが乗った時*/
+.btn_csv:hover {
+	/*アンダーラインを引く*/
+	text-decoration: underline;
+	/*透明度*/
+	opacity: 0.8;
+}
+
+/* 検索エリアの設定 */
+.search_area {
+	/*中央に寄せる*/
+	text-align: center;
+	/*背景色*/
+	background: #ffffff;
+	/*内側の余白*/
+	padding: 30px;
+	/*検索エリアの下側に、細くて薄いグレーの実線を表示する*/
+	border-bottom: 1px solid #ddd;
+}
+
+/*検索欄の設定*/
+.search_row {
+	margin: 10px 0;
+	font-size: 20px;
+}
+
+/*テキスト入力欄の設定*/
+.search_row input[type="text"] {
+	width: 250px;
+	height: 20px;
+	font-size: 16px;
+}
+
+.search_row label {
+	/*ラベルの右側の外側の余白*/
+	margin-right: 5px;
+	/*文字の太さ*/
+	font-weight: 500;
+}
+
+/*検索ボタンとクリアボタン*/
+input[name="search_btn"],
+input[name="clear_btn"] {
+	/*ボタンの横幅*/
+	width: 60px;
+	/*ボタンの高さ*/
+	height: 30px;
+	/*太字*/
+	font-weight: bold;
+	/*角を丸くする*/
+	border-radius: 6px;
+	/*黒色で細い（1px）実線の枠線を付ける*/
+	border: 1px solid #000000;
+	/*検索ボタンとクリアボタンにマウスが乗った時に指さしカーソルにする*/
+	cursor: pointer;
+}
+
+/*マウスが乗った時*/
+input[name="search_btn"]:hover,
+input[name="clear_btn"]:hover {
+	/*透明度を80%*/
+	opacity: 0.8;
+}
+
+/* 在庫一覧テーブル */
+.coffee_table {
+	/*外側の上下の余白をつける */
+	/*左右は自動にし、テーブルを中央に寄せる*/
+	margin: 20px auto;
+	/*テーブルの横幅を親要素からみて80％にする*/
+	width: 80%;
+	/*二重線から1線にする*/
+	border-collapse: collapse;
+	/*背景色白にする*/
+	background-color: #fff;
+}
+
+/* 銘柄名の列だけの設定*/
+.coffee_table tr th:nth-child(3),
+.coffee_table td th:nth-child(3) {
+	/*横幅*/
+	width: 350px;
+	/*長い名前の時に、はみ出さずに折り返す*/
+	word-break: break-word;
+}
+
+/*コーヒーテーブルの見出しのセルの設定*/
+.coffee_table th {
+	background: #d9c7a3;
+	/*内側の余白をつける*/
+	padding: 15px;
+	font-size: 20px;
+}
+
+/*通常のセルの設定*/
+.coffee_table td {
+	/*内側の余白をつける*/
+	padding: 10px;
+	/*文字を中央に寄せる*/
+	text-align: center;
+}
+
+/*コーヒーテーブルの偶数行の要素だけ色を指定する*/
+.coffee_table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+/*並び替えエリアの設定*/
+.sort_area {
+	/*テーブルの幅に合わせる */
+    width: 90%;            
+    display: flex;
+	/*右端に寄せる*/
+    justify-content: flex-end; 
+	align-items: center;
+	margin-top: 20px;
+}
+
+/*並び替えの文字の設定*/
+.sort_area label {
+	color: #4e342e;
+    font-size: 15px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/*セレクトボックスの設定*/
+#mainSort {
+    background-color: #fff;
+    border: 1px solid #6f4e37;
+    border-radius: 6px;
+    padding: 4px 8px;
+    color: #4e342e;
+    cursor: pointer;
+}
+
+/*ラジオボタン（コーヒー豆型）*/
+input[type="radio"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 20px;
+	height: 30px;
+	border-radius: 50% 50% 40% 40%;
+	background: #6b4f33;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	border: 2px solid #4a3524;
+}
+
+/*コーヒー豆にマウスが乗った時に透明度を80%にする*/
+input[type="radio"]:hover {
+	opacity: 0.7;
+}
+
+/*豆の割れ目*/
+input[type="radio"]::before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	width: 4px;
+	height: 18px;
+	background: #3a281b;
+	border-radius: 2px;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: 0.2s;
+}
+
+/* 選択時の割れ目表示 */
+input[type="radio"]:checked::before {
+	opacity: 1;
+}
+
+.out-stock {
+	color: red;
+	font-weight: bold;
+}
+
+.low-stock {
+	color: orange;
+}
+
+/* ボタンエリア */
+.action-buttons {
+	text-align: center;
+	margin: 30px;
+}
+
+/* ボタンの共通の設定 */
+.btn {
+	/*外側の余白 上下 左右*/
+	margin: 10px 20px;
+	/*内側の余白 上下 左右*/
+	padding: 10px 25px;
+	/*枠線を消す*/
+	border: none;
+	/*角を丸める*/
+	border-radius: 8px;
+	/*文字の大きさ*/
+	font-size: 20px;
+	/*指差しカーソルを表示*/
+	cursor: pointer;
+	/*右側に3px 下側に4px影をつけ、ぼかしも3px入れる*/
+	box-shadow: 3px 4px 3px #4a3524;
+	/* 下線を消す */
+	text-decoration: none;
+}
+
+/* ボタン色 */
+.btn_entry {
+	/*ボタンの背景色*/
+	background: #437a44;
+	/*文字の色*/
+	color: white;
+}
+
+.btn_update {
+	/*ボタンの背景色*/
+	background: #1964a1;
+	/*文字の色*/
+	color: white;
+}
+
+.btn_delete {
+	/*ボタンの背景色*/
+	background: #ad251b;
+	/*文字の色*/
+	color: white;
+}
+
+.action-buttons button:hover {
+	/*マウスが乗った時だけ透明度を80%にする*/
+	opacity: 0.7;
+}
+
+/* 商品を削除した時に表示されるメッセージ */
+.msg {
+	/*中央寄せ*/
+	text-align: center;
+}
+
+.msg strong {
+	margin-left: 30px;
+	font-size: 20px;
+	/*アンダーラインを引く*/
+	text-decoration: underline;
+}
