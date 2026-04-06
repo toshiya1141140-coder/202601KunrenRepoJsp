@@ -91,7 +91,7 @@ WebContent/
 1. このリポジトリをクローン
 
 ```
-git clone <https://github.com/toshiya1141140-coder/202601KunrenRepoJsp.git>
+git clone https://github.com/toshiya1141140-coder/202601KunrenRepoJsp.git
 ```
 
 2. Eclipseにインポート
